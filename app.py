@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def Olympics():
-    file='about9.jpg'
+    file='image.png'
     return render_template('Olympics.html',file=file)
 
 if __name__ == '__main__':
