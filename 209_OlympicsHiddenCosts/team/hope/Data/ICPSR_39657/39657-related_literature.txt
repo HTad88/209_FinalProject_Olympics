@@ -1,0 +1,30 @@
+Bibliography
+National Prisoner Statistics, [United States], 1978-2023
+
+This bibliography includes published and unpublished works that are related 
+to ICPSR study 39657. It includes works that are based on primary
+or secondary analysis of the data, or which describe or critique those
+data or the collection methodology. 
+
+If you publish a work or know of other works that are based on these data,
+please send the complete citation and name of the ICPSR study used to:
+icpsrbibliography@umich.edu
+
+
+1. Maruschak, Laura M., "HIV in Prisons, 2023." Statistical Tables. NCJ
+309975, Washington, DC: Bureau of Justice Statistics, Jun 2025.
+Abstract: https://bjs.ojp.gov/library/publications/hiv-prisons-2023-statistical-tables
+Full text: https://bjs.ojp.gov/library/publications/hiv-prisons-2023-statistical-tables/web-report
+This report presents national- and jurisdiction-level estimates of the
+number and rate of prisoners living with HIV while in the custody of state
+and federal correctional authorities. Also included are data on HIV testing
+practices during the intake process, while in custody, and during discharge
+planning, by jurisdiction.
+The National Prisoner Statistics (NPS) program collects annual data on
+prisoners at yearend from the 50 state departments of corrections and the
+Federal Bureau of Prisons. BJS has been using the NPS to collect these
+since 1991.
+
+2. Mueller, Derek; Kluckow, Rich, "Prisoners in 2023." Statistical Tables.
+NCJ 310197, Washington, DC: Bureau of Justice Statistics, Sep 2025.
+Full text PDF: https://bjs.ojp.gov/document/p23st.pdf

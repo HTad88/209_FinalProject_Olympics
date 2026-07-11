@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Placeholder chart — replace with your Altair export.",
+  "width": "container",
+  "height": 300,
+  "data": {
+    "values": [
+      {"year": 2018, "count": 12},
+      {"year": 2019, "count": 18},
+      {"year": 2020, "count": 9},
+      {"year": 2021, "count": 22},
+      {"year": 2022, "count": 27},
+      {"year": 2023, "count": 31}
+    ]
+  },
+  "mark": {"type": "bar", "cornerRadiusEnd": 3},
+  "encoding": {
+    "x": {"field": "year", "type": "ordinal", "title": "Year"},
+    "y": {"field": "count", "type": "quantitative", "title": "Count"},
+    "tooltip": [
+      {"field": "year", "type": "ordinal"},
+      {"field": "count", "type": "quantitative"}
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Placeholder line chart — replace with your Altair export.",
+  "width": "container",
+  "height": 300,
+  "data": {
+    "values": [
+      {"x": 1, "y": 3, "series": "A"},
+      {"x": 2, "y": 5, "series": "A"},
+      {"x": 3, "y": 4, "series": "A"},
+      {"x": 4, "y": 7, "series": "A"},
+      {"x": 5, "y": 9, "series": "A"},
+      {"x": 1, "y": 2, "series": "B"},
+      {"x": 2, "y": 4, "series": "B"},
+      {"x": 3, "y": 6, "series": "B"},
+      {"x": 4, "y": 5, "series": "B"},
+      {"x": 5, "y": 8, "series": "B"}
+    ]
+  },
+  "mark": {"type": "line", "point": true},
+  "encoding": {
+    "x": {"field": "x", "type": "quantitative"},
+    "y": {"field": "y", "type": "quantitative"},
+    "color": {"field": "series", "type": "nominal"}
+  }
+}

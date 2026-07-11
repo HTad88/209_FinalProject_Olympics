@@ -1,0 +1,61 @@
+File Manifest for ICPSR 39657
+
+United States. Bureau of Justice Statistics. National Prisoner Statistics,
+[United States], 1978-2023. ICPSR39657-v1. Ann Arbor, MI: Inter-university
+Consortium for Political and Social Research [distributor], 2026-04-02.
+http://doi.org/10.3886/ICPSR39657.v1
+
+
+Study-level Documentation
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    39657-descriptioncitation.pdf       -       -         -       2026-04-02  -
+
+    39657-related_literature.txt        -       -         -       daily       -
+
+    39657-manifest.txt                  -       -         -       daily       -
+
+
+DS0001 National Prisoner Statistics, [United States], 1978-2023
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    39657-0001-Codebook-ICPSR.epub      -       -         -       2026-04-02  06c59736eb2c896fd6edfffe3eb47bce
+
+    39657-0001-Codebook-ICPSR.pdf       -       -         -       2026-04-02  c80921fb1def1874abf9eecc8c1e6236
+
+    39657-0001-Data.dta                 -       2,484     235     2026-04-02  dfa7887fb9a930b0215e73f7435a900c
+
+    39657-0001-Data.rda                 -       2,484     235     2026-04-02  a9d93700f17022e42ae3dd10aa65ce22
+
+    39657-0001-Data.sav                 -       2,484     235     2026-04-02  abaa293bad17704b4234fce2d3d85409
+
+    39657-0001-Data.stc                 -       2,484     235     2026-04-02  f31afc78dab5f1b56ce73e3a9db63db7
+
+    39657-0001-Data.tsv                 -       2,484     235     2026-04-02  c37e6bfd56559f2182199ee4ddd9b90d
+
+    39657-0001-Data.txt                 967     2,484     235     2026-04-02  6bf95f8310ab357d10e00731ffd56e91
+
+    39657-0001-Documentation-NPS_Crosswalk_1978_2023.xlsx -       -         -       2026-04-02  a8998e29857936c37be90749e313672a
+
+    39657-0001-Documentation-NPS_Lookup_Tables_1978_2023.xlsx -       -         -       2026-04-02  86630d66c62ebf212cdbaf6bd2bb7551
+
+    39657-0001-Documentation-notes.zip  -       -         -       2026-04-02  54b2d003eacb2b82981ec484a52b53c0
+
+    39657-0001-Questionnaire.pdf        -       -         -       2026-04-02  2e071614dbe2c147f4056e35bea18a12
+
+    39657-0001-Setup.dct                -       -         -       2026-04-02  53d416796936a947fc94f5ff6c6a39ce
+
+    39657-0001-Setup.do                 -       -         -       2026-04-02  6dc845521ce69cf85355fbfe66a5fe89
+
+    39657-0001-Setup.sas                -       -         -       2026-04-02  a79157987bc0f3313855811cdd10a475
+
+    39657-0001-Setup.sps                -       -         -       2026-04-02  971df4baa4388adcf7f4cf45e3692492
+
+    39657-0001-Supplemental_syntax.do   -       -         -       2026-04-02  55e9b768b2c2ecb9eedcf5b0256fdd50
+
+    39657-0001-Supplemental_syntax.sas  -       -         -       2026-04-02  016a7504bb39a1390f3c0507504c2c80
+

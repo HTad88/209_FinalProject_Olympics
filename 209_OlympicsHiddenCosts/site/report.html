@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project — Scrollytelling Report</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Charting + scroll libraries (CDN, no build step needed) -->
+    <script src="https://unpkg.com/d3@7"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+
+    <!-- Simple side nav (optional, mirrors the F1 example) -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="sidebar-content">
+            <a href="index.html" class="menu-item">About</a>
+            <a href="report.html" class="menu-item">Report</a>
+        </div>
+    </div>
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+
+    <div id="main-content">
+
+        <header class="intro">
+            <h1>Olympics - The hidden costs /<h1>
+                    <p class="byline"> By Floriane Leynaud, Hope Hadsen, Bernard Julve — DATASCI 209, Summer 2026</p>
+                    <div class="text-content">
+                        <p>
+                            Every four years, a new city takes on the Olympic bill. Since 1976, fourteen cities across
+                            five
+                            continents have played host — and each one has walked away with a very different fiscal and
+                            social footprint.
+                            From Montreal to Athens, from Atlanta to Beijing, the Games have left a trail of debt,
+                            dislocation, and disappointment. In this report, we explore the hidden costs of hosting the
+                            Olympics, examining the financial and social impacts on host cities and their residents.
+
+
+                        </p>
+                    </div>
+        </header>
+
+        <main>
+            <article id="scrolly">
+
+                <!-- STEP 0 -->
+                <section class="step" data-step="0">
+                    <div class="text-content">
+                        <h2>Section 1 heading</h2>
+                        <p>Narrative paragraph that sets up the first chart. Keep it tight.</p>
+                    </div>
+                    <div id="vis0" class="chart-holder"></div>
+                </section>
+
+                <!-- STEP 1 -->
+                <section class="step" data-step="1">
+                    <div class="text-content">
+                        <h2>Section 2 heading</h2>
+                        <p>Narrative paragraph for the second chart.</p>
+                    </div>
+                    <div id="vis1" class="chart-holder"></div>
+                </section>
+
+                <!-- STEP 2 -->
+                <section class="step" data-step="2">
+                    <div class="text-content">
+                        <h2>Section 3 heading</h2>
+                        <p>Narrative for the third chart. This one loads via iframe (works well for Altair `.html`
+                            exports with widgets/selections).</p>
+                    </div>
+                    <div id="vis2" class="chart-holder"></div>
+                </section>
+
+                <!-- STEP 3 -->
+                <section class="step" data-step="3">
+                    <div class="text-content">
+                        <h2>Takeaways</h2>
+                        <p>Wrap-up paragraph. What should the reader remember?</p>
+                    </div>
+                </section>
+
+            </article>
+        </main>
+
+        <footer>
+            <p>Data sources: … · Code: <a href="#">GitHub</a></p>
+        </footer>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

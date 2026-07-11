@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Placeholder iframe chart</title>
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+<style>body{margin:0;font-family:sans-serif} #c{width:100%}</style>
+</head>
+<body>
+<div id="c"></div>
+<script>
+vegaEmbed("#c", {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Placeholder — replace this file with chart.save('chart_2.html') from your notebook.",
+  "width": "container",
+  "height": 500,
+  "data": {"values": [
+    {"cat": "Alpha",   "val": 28},
+    {"cat": "Bravo",   "val": 55},
+    {"cat": "Charlie", "val": 43},
+    {"cat": "Delta",   "val": 91},
+    {"cat": "Echo",    "val": 81}
+  ]},
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "cat", "type": "nominal", "sort": "-y"},
+    "y": {"field": "val", "type": "quantitative"},
+    "color": {"field": "cat", "type": "nominal", "legend": null}
+  }
+}, {actions: false});
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+games_year,host_city,country,estimated_displaced_people,estimate_unit,source_short,source_title,notes
+1988,Seoul,South Korea,720000,people,COHRE 2007,Fair Play for Housing Rights: Mega-Events Olympic Games and Housing Rights,Point estimate reported in COHRE report for Olympic-related displacement context.
+1992,Barcelona,Spain,unknown,people,COHRE 2007,Fair Play for Housing Rights: Mega-Events Olympic Games and Housing Rights,COHRE includes Barcelona discussion; extract exact figure from the PDF before final report.
+1996,Atlanta,United States,15000,people,COHRE 2007,Fair Play for Housing Rights: Mega-Events Olympic Games and Housing Rights,Commonly cited estimate; verify against the Atlanta background paper citation in report text.
+2004,Athens,Greece,unknown,people,COHRE 2007,Fair Play for Housing Rights: Mega-Events Olympic Games and Housing Rights,Extract exact figure from COHRE/Athens background paper before final report.
+2008,Beijing,China,1500000,people,COHRE 2007,Fair Play for Housing Rights: Mega-Events Olympic Games and Housing Rights,Point estimate commonly cited in COHRE-era summaries; verify exact wording in archived report.
+2012,London,United Kingdom,unknown,people,COHRE+case studies,Fair Play context and later London case studies,COHRE 2007 predates London 2012; use this row as placeholder and replace with a post-2012 source.
+2016,Rio de Janeiro,Brazil,22000,families,Comite Popular Rio 2014,Dossie Megaeventos e Violacoes dos Direitos Humanos no Rio de Janeiro,Estimate is reported as affected/removed families across Copa+Olimpiadas period.

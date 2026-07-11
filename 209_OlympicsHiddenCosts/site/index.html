@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Final Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="sidebar-content">
+            <a href="index.html" class="menu-item">About</a>
+            <a href="report.html" class="menu-item">Report</a>
+        </div>
+    </div>
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+
+    <div id="main-content">
+        <header class="intro">
+            <h1>About This Project</h1>
+        </header>
+        <main>
+            <div class="text-content">
+                <h2>The team</h2>
+                <p>Names, roles, contact.</p>
+
+                <h2>The question</h2>
+                <p>What we set out to answer.</p>
+
+                <h2>The data</h2>
+                <p>Sources, time range, caveats.</p>
+
+                <h2>The stack</h2>
+                <p>Altair (Python) → Vega-Lite JSON → rendered in-browser with Vega-Embed. Scroll behavior via Scrollama. Hosted on Vercel.</p>
+
+                <p><a href="report.html">→ Read the report</a></p>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
