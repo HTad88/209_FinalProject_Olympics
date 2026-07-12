@@ -10,9 +10,6 @@ def Olympics():
 def tab():  # Changed from 'embed' to 'tab'
     return render_template('test_tableau.html')
 
-@app.route('/Test')
-def tab():  # Changed from 'embed' to 'tab'
-    return render_template('test_formatting.html')
 
 if __name__ == '__main__':
     app.run()
