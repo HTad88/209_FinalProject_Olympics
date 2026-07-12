@@ -1,5 +1,8 @@
 from flask import Flask, render_template
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    static_folder=os.path.abspath('209_OlympicsHiddenCosts/site'),
+)
 
 @app.route('/')
 def Olympics():
