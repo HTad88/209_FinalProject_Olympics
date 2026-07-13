@@ -1,19 +1,8 @@
 from flask import Flask, render_template
-import os
 
 app = Flask(
     __name__
-    ,static_folder=os.path.abspath('209_OlympicsHiddenCosts/site')
-    ,template_folder=os.path.abspath('209_OlympicsHiddenCosts/site')
 )
-
-@app.route('/<path:path>')
-def serve_spa(path):
-    # If the request matches a real file in the dist folder (like a JS or CSS file), serve it
-    if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
-        return send_from_directory(app.static_folder, path)
-    # Otherwise, always serve index.html so the SPA can handle the page URL internally
-    return send_from_directory(app.static_folder, 'index.html')
 
 @app.route('/')
 def Olympics():
