@@ -11,10 +11,10 @@ if (document.getElementById("scrolly")) {
     // into the passed container element. Add / remove entries as needed.
     const stepRenderers = {
         0: (container) => {
-            // Vega-Lite JSON exported from Altair via: chart.save('chart_0.json')
+            // H1 debt map — exported from olympic_host_debt_map.ipynb (cell 8, export_map.save)
             const id = "vis0-internal";
             container.innerHTML = `<div id="${id}" style="width:100%;"></div>`;
-            vegaEmbed(`#${id}`, "charts/chart_0.json", {
+            vegaEmbed(`#${id}`, "charts/debt_map.json", {
                 actions: false,
                 width: "container",
             });
