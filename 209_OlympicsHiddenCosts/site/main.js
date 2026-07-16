@@ -20,18 +20,9 @@ if (document.getElementById("scrolly")) {
             });
         },
 
-        1: (container) => {
-            // Iframe approach: works great for Altair chart.save('foo.html')
-            // outputs, especially charts with widgets / selections.
-            container.innerHTML = `
-                <iframe src="charts/chart_2.html"
-                        class="altair-iframe"
-                        style="height: 600px;"
-                        scrolling="no"></iframe>
-            `;
-        },
-
-        // step 2 has no chart — text-only takeaways
+        // Steps 1–3 (H2 cost/revenue, H3 GDP, H4 social/environmental) await their
+        // charts — add an `N: (container) => {...}` entry here once each is exported.
+        // Step 4 (Takeaways) is text-only.
     };
 
     function handleStepEnter(response) {
