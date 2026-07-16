@@ -58,10 +58,11 @@
                     <div class="text-content">
                         <h2>H1 — The games and the public weight</h2>
                         <p>The Olympic bill doesn't disappear when the closing ceremony ends. Every host
-                            since 1976 is plotted below — each circle sized by the total cost of its Games
-                            and coloured by who ended up carrying the debt. Montreal (1976) needed 30 years to pay
-                            off its stadium; Athens' (2004) venues still sit on the public books. Hover any city to
-                            see its cost, overrun, and debt status.</p>
+                            since 1976 is plotted below — each circle sized by its <em>sports-related</em> cost
+                            (venues and operations, in 2022 US$) and coloured by how long the host carried the
+                            debt. Montreal (1976) needed 30 years to pay off its stadium; Athens' (2004) venues
+                            still sit on the public books. Use the filter to compare Summer and Winter Games, and
+                            hover any city for its cost, overrun and debt outcome.</p>
                     </div>
                     <div id="vis0" class="chart-holder"></div>
                 </section>
@@ -88,7 +89,14 @@
         </main>
 
         <footer>
-            <p>Data sources: … · Code: <a href="#">GitHub</a></p>
+            <p>
+                <strong>Data sources.</strong> Cost and cost-overrun figures: Flyvbjerg, Budzier et al.,
+                <em>The Oxford Olympics Study</em> (2016 / 2021 / 2024 editions), sports-related cost only,
+                constant 2022 US$. Debt outcomes compiled from national audit institutions (UK NAO, US GAO,
+                France Cour des comptes, Japan Board of Audit, Bank of Greece and others); several debt values
+                are provisional — see <code>DATA_SOURCES_AUDIT.md</code>. Seoul 1988 and Sarajevo 1984 are not
+                covered by the Oxford dataset.
+            </p>
         </footer>
 
     </div>
