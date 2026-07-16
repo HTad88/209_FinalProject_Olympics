@@ -21,15 +21,6 @@ if (document.getElementById("scrolly")) {
         },
 
         1: (container) => {
-            const id = "vis1-internal";
-            container.innerHTML = `<div id="${id}" style="width:100%;"></div>`;
-            vegaEmbed(`#${id}`, "charts/chart_1.json", {
-                actions: false,
-                width: "container",
-            });
-        },
-
-        2: (container) => {
             // Iframe approach: works great for Altair chart.save('foo.html')
             // outputs, especially charts with widgets / selections.
             container.innerHTML = `
@@ -40,7 +31,7 @@ if (document.getElementById("scrolly")) {
             `;
         },
 
-        // step 3 has no chart — text-only takeaways
+        // step 2 has no chart — text-only takeaways
     };
 
     function handleStepEnter(response) {

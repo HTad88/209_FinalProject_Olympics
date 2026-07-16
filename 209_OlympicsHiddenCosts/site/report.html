@@ -27,37 +27,40 @@
     </div>
     <button class="openbtn" onclick="openNav()">&#9776;</button>
 
+    <!-- Full-bleed hero banner -->
+    <header class="hero">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <h1>Olympics — The Hidden Costs</h1>
+            <p class="hero__byline">By Floriane Leynaud, Hope Tadsen, Bernard Julve — DATASCI 209, Summer 2026</p>
+        </div>
+        <div class="hero__scroll-cue" aria-hidden="true">&#8964;</div>
+    </header>
+
     <div id="main-content">
 
-        <header class="intro">
-            <h1>Olympics - The hidden costs /<h1>
-                    <p class="byline"> By Floriane Leynaud, Hope Tadsen, Bernard Julve — DATASCI 209, Summer 2026</p>
-                    <div class="text-content">
-                        <p>
-                            Every four years, a new city takes on the Olympic bill. Since 1976, fourteen cities across
-                            five
-                            continents have played host — and each one has walked away with a very different fiscal and
-                            social footprint.
-                            From Montreal to Athens, from Atlanta to Beijing, the Games have left a trail of debt,
-                            dislocation, and disappointment. In this report, we explore the hidden costs of hosting the
-                            Olympics, examining the financial and social impacts on host cities and their residents.
-
-
-                        </p>
-                    </div>
-        </header>
+        <section class="intro">
+            <div class="text-content">
+                <p>
+                    Every four years, a new city takes on the Olympic bill. Since 1976, fourteen cities across
+                    five continents have played host — and each one has walked away with a very different fiscal and
+                    social footprint. In this report, we explore the hidden costs of hosting the
+                    Olympics, examining the financial and social impacts on host cities and their residents.
+                </p>
+            </div>
+        </section>
 
         <main>
             <article id="scrolly">
 
                 <!-- STEP 0 — H1: debt map (Flo) -->
-                <section class="step" data-step="0">
+                <section class="step step--shaded" data-step="0">
                     <div class="text-content">
-                        <h2>The Games leave cities in debt for decades</h2>
+                        <h2>H1 — The games and the public weight</h2>
                         <p>The Olympic bill doesn't disappear when the closing ceremony ends. Every host
                             since 1976 is plotted below — each circle sized by the total cost of its Games
-                            and coloured by who ended up carrying the debt. Montreal needed 30 years to pay
-                            off its stadium; Athens' venues still sit on the public books. Hover any city to
+                            and coloured by who ended up carrying the debt. Montreal (1976) needed 30 years to pay
+                            off its stadium; Athens' (2004) venues still sit on the public books. Hover any city to
                             see its cost, overrun, and debt status.</p>
                     </div>
                     <div id="vis0" class="chart-holder"></div>
@@ -66,15 +69,6 @@
                 <!-- STEP 1 -->
                 <section class="step" data-step="1">
                     <div class="text-content">
-                        <h2>Section 2 heading</h2>
-                        <p>Narrative paragraph for the second chart.</p>
-                    </div>
-                    <div id="vis1" class="chart-holder"></div>
-                </section>
-
-                <!-- STEP 2 -->
-                <section class="step" data-step="2">
-                    <div class="text-content">
                         <h2>Section 3 heading</h2>
                         <p>Narrative for the third chart. This one loads via iframe (works well for Altair `.html`
                             exports with widgets/selections).</p>
@@ -82,8 +76,8 @@
                     <div id="vis2" class="chart-holder"></div>
                 </section>
 
-                <!-- STEP 3 -->
-                <section class="step" data-step="3">
+                <!-- STEP 2 -->
+                <section class="step" data-step="2">
                     <div class="text-content">
                         <h2>Takeaways</h2>
                         <p>Wrap-up paragraph. What should the reader remember?</p>
