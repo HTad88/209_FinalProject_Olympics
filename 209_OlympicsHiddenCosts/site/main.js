@@ -22,6 +22,25 @@ if (document.getElementById("scrolly")) {
 
         // Steps 1–3 (H2 cost/revenue, H3 GDP, H4 social/environmental) await their
         // charts — add an `N: (container) => {...}` entry here once each is exported.
+		1: (container) => {
+            // H2 Cost vs Revenues chart — exported from olympic_host_debt_map.ipynb (cell 8, export_map.save)
+            const id = "vis1-internal";
+            container.innerHTML = `<div id="${id}" style="width:100%;"></div>`;
+            vegaEmbed(`#${id}`, "charts/streamgraph_costs_revenues.json", {
+                actions: false,
+                width: "container",
+            });
+        },
+		2: (container) => {
+            // H3 GDP Growth chart — exported from olympic_host_debt_map.ipynb (cell 8, export_map.save)
+            const id = "vis2-internal";
+            container.innerHTML = `<div id="${id}" style="width:100%;"></div>`;
+            vegaEmbed(`#${id}`, "charts/line_graph_gdp.json", {
+                actions: false,
+                width: "container",
+            });
+        },
+		
         // Step 4 (Takeaways) is text-only.
     };
 
