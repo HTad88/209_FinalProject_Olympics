@@ -40,15 +40,7 @@ if (document.getElementById("scrolly")) {
                 width: "container",
             });
         },
-		3: (container) => {
-            // H3 - Social and environmental impacts
-            const id = "vis3-internal";
-            container.innerHTML = `<div id="${id}" style="width:100%;"></div>`;
-            vegaEmbed(`#${id}`, "charts/Emissions.html", {
-                actions: false,
-                width: "container",
-            });
-        },
+		
         // Step 4 (Takeaways) is text-only.
     };
 
