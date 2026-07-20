@@ -26,9 +26,8 @@ if (document.getElementById("scrolly")) {
             // H2 Cost vs Revenues chart — exported from olympic_host_debt_map.ipynb (cell 8, export_map.save)
             const id = "vis1-internal";
             container.innerHTML = `<div id="${id}" style="width:100%;"></div>`;
-            vegaEmbed(`#${id}`, "charts/streamgraph_costs_revenues.json", {
+            vegaEmbed(`#${id}`, "charts/streamgraph_costs_revenues_faceted.json", {
                 actions: false,
-                width: "container",
             });
         },
 		2: (container) => {
@@ -57,6 +56,10 @@ if (document.getElementById("scrolly")) {
         if (render) {
             render(container);
             container.dataset.rendered = "true";
+			
+			setTimeout(() => {
+                window.dispatchEvent(new Event('resize'));
+            }, 50);
         }
     }
 
