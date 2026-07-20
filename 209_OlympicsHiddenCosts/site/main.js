@@ -34,10 +34,68 @@ if (document.getElementById("scrolly")) {
             // H3 GDP Growth chart — exported from olympic_host_debt_map.ipynb (cell 8, export_map.save)
             const id = "vis2-internal";
             container.innerHTML = `<div id="${id}" style="width:100%;"></div>`;
+			
+			let currentIndex = 0;
+			let animationTimer = null;
+			let hasClicked = false;
             vegaEmbed(`#${id}`, "charts/line_graph_gdp.json", {
                 actions: false,
                 width: "container",
-            });
+            }).then(result => {
+				const view = result.view;
+				
+				const rawData = view.data("df_olympics_balance_gdp");
+				const countries = [...new Set(rawData.map(row => row.Country))];
+
+				// Updates the simple primitive value signal cleanly across all layers
+				function setTargetCountry(countryName) {
+					view.signal("active_country", countryName); 
+					view.runAsync();
+				}
+
+				// Auto-cycle loop
+				function startAnimationLoop() {
+					if (animationTimer) clearInterval(animationTimer); 
+					hasClicked = false;
+
+					animationTimer = setInterval(() => {
+						if (!hasClicked && countries.length > 0) {
+							setTargetCountry(countries[currentIndex]);
+							currentIndex = (currentIndex + 1) % countries.length;
+						}
+					}, 1300);
+				}
+				
+				function freezeAnimation() {
+					if (!hasClicked) {
+						hasClicked = true;
+						clearInterval(animationTimer);
+					}
+				}
+				
+				startAnimationLoop();
+				
+				view.addEventListener('click', function(event, item) {
+					// Click on lines/diamonds extracts and freezes on that Country name
+					if (item && item.datum && (
+							item.datum.value
+						)
+					) {
+						freezeAnimation();
+						setTargetCountry(item.datum.value);
+					} else if (item && item.datum && (
+							item.datum.Country
+						)
+					) {
+						freezeAnimation();
+						setTargetCountry(item.datum.Country);
+					} else if (item === null) {
+						// Click on a specific Legend entry item node extracts and freezes on that index value
+						startAnimationLoop();
+					}
+				});
+
+			}).catch(console.error);
         },
 		
         // Step 4 (Takeaways) is text-only.
