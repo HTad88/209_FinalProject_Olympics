@@ -44,6 +44,15 @@ if (document.getElementById("scrolly")) {
             }).then(result => {
 				const view = result.view;
 				
+				// Inject a quick style rule targeting the legend entries inside this specific chart
+				const style = document.createElement('style');
+				style.innerHTML = `
+				  #${view.id} .role-legend-entry {
+					cursor: pointer !important;
+				  }
+				`;
+				document.head.appendChild(style);
+				
 				const rawData = view.data("df_olympics_balance_gdp");
 				const countries = [...new Set(rawData.map(row => row.Country))];
 
@@ -63,7 +72,7 @@ if (document.getElementById("scrolly")) {
 							setTargetCountry(countries[currentIndex]);
 							currentIndex = (currentIndex + 1) % countries.length;
 						}
-					}, 1300);
+					}, 3500);
 				}
 				
 				function freezeAnimation() {
