@@ -6,7 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project — Scrollytelling Report</title>
     <link rel="stylesheet" href="style.css">
-
+    <!-- Style for 2 column list -->
+    <style>
+        .two-column-list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            max-width: 500px;
+            gap: 10px 30px;
+        }
+        
+        .two-column-list li {
+            flex: 0 0 calc(50% - 15px);
+            padding: 10px 15px;
+            background: #f0f4ff;
+            border-radius: 6px;
+            font-weight: 500;
+            color: #1a1a2e;
+            border-left: 3px solid #667eea;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .two-column-list li::before {
+            content: "✦";
+            color: #667eea;
+            position: absolute;
+            left: 8px;
+        }
+    </style>
     <!-- Charting + scroll libraries (CDN, no build step needed) -->
     <script src="https://unpkg.com/d3@7"></script>
     <script src="https://unpkg.com/scrollama"></script>
