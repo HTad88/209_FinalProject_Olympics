@@ -129,7 +129,6 @@ a:hover {
 .step {
     min-height: 60vh;
     padding: 2rem 0;
-    border-top: 1px dashed #ddd;
 }
 
 /* Shaded section — full-bleed light grey band to separate a section from its neighbours.
@@ -142,6 +141,16 @@ a:hover {
     border-top: none;
     border-radius: 0;
     padding: 2.5rem 0;
+}
+
+/* Shaded sub-section band — same full-bleed grey technique as .step--shaded,
+   but wraps only a PORTION inside a step (used around the happiness chart). */
+.band--shaded {
+    background: #f0f0f2;
+    box-shadow: 0 0 0 100vmax #f0f0f2;
+    clip-path: inset(0 -100vmax);
+    padding: 2.5rem 0;
+    margin: 1.5rem 0;
 }
 
 .text-content {
@@ -268,4 +277,36 @@ footer {
     color: #666;
     font-size: 0.9rem;
     text-align: center;
+}
+
+/* Photo-wallpaper footer — full-bleed hero image with a dark scrim on top
+   so the citation text stays readable (same overlay idea as .hero). The
+   `margin: … calc(50% - 50vw)` breaks the footer out of the 900px column
+   to span the full viewport width. */
+.footer--photo {
+    width: 100vw;
+    margin: 6rem calc(50% - 50vw) 0;
+    padding: 3.5rem 1.5rem;
+    border-top: none;
+    background-image:
+        linear-gradient(rgba(11, 27, 58, 0.85), rgba(11, 27, 58, 0.9)),
+        url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #eef2f7;                 /* light text on the dark photo */
+}
+
+.footer--photo h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.footer--photo p {
+    max-width: 760px;               /* keep line length readable */
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer--photo a {
+    color: #9ecbff;                 /* light-blue links, visible on dark */
 }
