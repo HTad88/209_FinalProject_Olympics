@@ -6,6 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project — Scrollytelling Report</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Style for name cards -->
+        <style>
+        .team-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .team-section h2 {
+            font-size: 2.5rem;
+            color: #1a1a2e;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Avatar circle - FIXED */
+        .team-card .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            overflow: hidden; /* Clips image into circle */
+            border: 3px solid #667eea;
+            background: #f0f0f0; /* Fallback color */
+        }
+
+        /* Image inside circle - FIXED */
+        .team-card .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Fills circle without distortion */
+            display: block;
+        }
+
+        .team-card h3 {
+            font-size: 1.1rem;
+            color: #1a1a2e;
+            margin-bottom: 5px;
+        }
+
+        .team-card .title {
+            color: #8892b0;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            background: #0a66c2;
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #004182;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
+        }
+    </style>
     <!-- Style for 2 column list -->
     <style>
         .two-column-list {
@@ -182,14 +273,67 @@
 
         <footer>
             <p>
-                <strong>Data sources.</strong> Cost and cost-overrun figures: Flyvbjerg, Budzier et al.,
+                <h2>Data Sources</h2>
+                <strong> Cost and cost-overrun figures: </strong> <br> Flyvbjerg, Budzier et al.,
                 <em>The Oxford Olympics Study</em> (2016 / 2021 / 2024 editions), sports-related cost only,
                 constant 2022 US$. Debt outcomes compiled from national audit institutions (UK NAO, US GAO,
                 France Cour des comptes, Japan Board of Audit, Bank of Greece and others); several debt values
                 are provisional — see <code>DATA_SOURCES_AUDIT.md</code>. Seoul 1988 and Sarajevo 1984 are not
-                covered by the Oxford dataset.
+                covered by the Oxford dataset. <br>
+                <strong> Cost/Rev data: </strong> <br>
+                <strong> GDP data: </strong> <br>
+                <strong> Emmissions Data: </strong> <br> Crippa, M., Guizzardi, D., Pagani, F., Banja, M., Muntean, M. et al., GHG emissions of all world countries - 2025 Report,
+                Publications Office of the European Union, Luxembourg, 2025, https://data.europa.eu/doi/10.2760/9816914, JRC143227. <br>
+                <strong> World Happiness Index: </strong> <br> Helliwell, J. F., Layard, R., Sachs, J. D., De Neve, J.-E., Aknin, L. B., & Wang, 
+                    S. (Eds.). (2025). World Happiness Report 2025. University of Oxford: Wellbeing Research Centre. 
+                
             </p>
         </footer>
+<section class="team-section">
+    <h2>Our Team</h2>
+    <div class="team-container" id="teamContainer">
+        
+        <!-- Floriane -->
+        <div class="team-card">
+            <div class="avatar">
+                <img src="images/Flo.png" alt="Floriane Leynaud">
+            </div>
+            <h3>Floriane Leynaud</h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/floriane-leynaud-0a475b29/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+        
+        <!-- Hope -->
+        <div class="team-card">
+            <div class="avatar">
+                <img src="images/Hope.png" alt="HT">
+            </div>
+            <h3>Hope Tadsen</h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/hope-t-063b4389/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+        
+        <!-- Bernard -->
+        <div class="team-card">
+            <div class="avatar">
+                <img src="images/Bernard.png" alt="Bernard Julve">
+            </div>
+            <h3>Bernard Julve</h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/bernardjulve/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+        
+    </div>
+</section>
 
     </div>
 
