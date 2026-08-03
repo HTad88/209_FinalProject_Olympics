@@ -11,6 +11,41 @@ body {
     background: #ffffff;
 }
 
+/* Decorative interlaced Olympic rings down the side margins — a faint,
+   fixed watermark behind all content (z-index -1 sits above the white
+   body background but below the centred content column). Hidden on
+   narrow screens where there's no side room. */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.22;
+    background-image: url("images/rings-side.svg");
+    background-repeat: repeat-y;
+    background-position: top center;
+    background-size: 150px auto;
+}
+
+body::before { left: 0; }
+body::after  { right: 0; transform: scaleX(-1); }   /* mirror on the right */
+
+/* Narrow the strips further on smaller laptops so they mostly stay in the
+   margin; hide entirely on tablets/phones where the content is full-width. */
+@media (max-width: 1200px) {
+    body::before,
+    body::after { width: 120px; background-size: 120px auto; opacity: 0.16; }
+}
+
+@media (max-width: 900px) {
+    body::before,
+    body::after { display: none; }
+}
+
 #main-content {
     max-width: 900px;
     margin: 0 auto;
@@ -135,8 +170,8 @@ a:hover {
    box-shadow + clip-path paint the grey edge-to-edge across the viewport WITHOUT
    widening the element, so the chart inside keeps its normal width. */
 .step--shaded {
-    background: #f0f0f2;
-    box-shadow: 0 0 0 100vmax #f0f0f2;
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.05);
     clip-path: inset(0 -100vmax);
     border-top: none;
     border-radius: 0;
@@ -146,8 +181,8 @@ a:hover {
 /* Shaded sub-section band — same full-bleed grey technique as .step--shaded,
    but wraps only a PORTION inside a step (used around the happiness chart). */
 .band--shaded {
-    background: #f0f0f2;
-    box-shadow: 0 0 0 100vmax #f0f0f2;
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.05);
     clip-path: inset(0 -100vmax);
     padding: 2.5rem 0;
     margin: 1.5rem 0;
