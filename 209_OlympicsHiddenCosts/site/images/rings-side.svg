@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 800" width="200" height="800" fill="none">
+  <!-- Decorative interlaced Olympic rings, vertical meander. Stroke-only = rings. -->
+  <g stroke-linecap="round">
+    <circle cx="70"  cy="60"  r="34" stroke="#0081C8" stroke-width="5"/>
+    <circle cx="112" cy="95"  r="22" stroke="#EE334E" stroke-width="4"/>
+    <circle cx="95"  cy="142" r="44" stroke="#FCB131" stroke-width="5"/>
+    <circle cx="136" cy="178" r="28" stroke="#00A651" stroke-width="4"/>
+    <circle cx="74"  cy="212" r="30" stroke="#1a1a1a" stroke-width="4"/>
+    <circle cx="116" cy="256" r="40" stroke="#0081C8" stroke-width="5"/>
+    <circle cx="90"  cy="302" r="20" stroke="#EE334E" stroke-width="4"/>
+    <circle cx="132" cy="338" r="34" stroke="#FCB131" stroke-width="5"/>
+    <circle cx="70"  cy="378" r="26" stroke="#00A651" stroke-width="4"/>
+    <circle cx="106" cy="422" r="46" stroke="#1a1a1a" stroke-width="5"/>
+    <circle cx="94"  cy="470" r="22" stroke="#0081C8" stroke-width="4"/>
+    <circle cx="136" cy="506" r="30" stroke="#EE334E" stroke-width="4"/>
+    <circle cx="74"  cy="546" r="38" stroke="#FCB131" stroke-width="5"/>
+    <circle cx="116" cy="592" r="24" stroke="#00A651" stroke-width="4"/>
+    <circle cx="90"  cy="632" r="32" stroke="#1a1a1a" stroke-width="4"/>
+    <circle cx="126" cy="676" r="42" stroke="#0081C8" stroke-width="5"/>
+    <circle cx="70"  cy="716" r="20" stroke="#EE334E" stroke-width="4"/>
+    <circle cx="110" cy="756" r="34" stroke="#FCB131" stroke-width="5"/>
+  </g>
+</svg>
