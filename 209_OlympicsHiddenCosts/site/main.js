@@ -26,9 +26,35 @@ if (document.getElementById("scrolly")) {
             // H2 Cost vs Revenues chart — exported from olympic_host_debt_map.ipynb (cell 8, export_map.save)
             const id = "vis1-internal";
             container.innerHTML = `<div id="${id}" style="width:100%;"></div>`;
-            vegaEmbed(`#${id}`, "charts/streamgraph_costs_revenues_faceted.json", {
+            vegaEmbed(`#${id}`, "charts/final_streamgraph_faceted_stacked_bar_chart.json", {
                 actions: false,
-            });
+            }).then(result => {
+				function alignTitles() {
+					// Target the individual chart group containers inside the generated SVG canvas
+					const views = document.querySelectorAll('.vega-embed svg g.role-scope');
+					if (views.length < 2) {
+						// Retry if the chart hasn't fully rendered in the DOM yet
+						setTimeout(alignTitles, 100);
+						return;
+					}
+					
+					// Find title blocks inside the SVG structure
+					const titles = document.querySelectorAll('.vega-embed svg g.role-title text');
+					
+					if (titles.length >= 2) {
+						// Title 1: Pin to the start of the Streamgraph view frame rectangle
+						titles[0].setAttribute('x', '0');
+						titles[0].setAttribute('text-anchor', 'start');
+						
+						// Title 2: Pin exactly to the starting x-coordinate of the second column layout
+						// 400px (Streamgraph width) + 50px default layout spacing = 450px
+						titles[1].setAttribute('x', '450');
+						titles[1].setAttribute('text-anchor', 'start');
+					}
+				}
+				// Execute alignment after rendering loop finish
+				setTimeout(alignTitles, 200);
+			}).catch(console.error);
         },
 		2: (container) => {
             // H3 GDP Growth chart — exported from olympic_host_debt_map.ipynb (cell 8, export_map.save)
@@ -38,72 +64,11 @@ if (document.getElementById("scrolly")) {
 			let currentIndex = 0;
 			let animationTimer = null;
 			let hasClicked = false;
-            vegaEmbed(`#${id}`, "charts/line_graph_gdp.json", {
+            vegaEmbed(`#${id}`, "charts/final_line_graph_gdp.json", {
                 actions: false,
                 width: "container",
             }).then(result => {
-				const view = result.view;
 				
-				// Inject a quick style rule targeting the legend entries inside this specific chart
-				const style = document.createElement('style');
-				style.innerHTML = `
-				  #${view.id} .role-legend-entry {
-					cursor: pointer !important;
-				  }
-				`;
-				document.head.appendChild(style);
-				
-				const rawData = view.data("df_olympics_balance_gdp");
-				const countries = [...new Set(rawData.map(row => row.Country))];
-
-				// Updates the simple primitive value signal cleanly across all layers
-				function setTargetCountry(countryName) {
-					view.signal("active_country", countryName); 
-					view.runAsync();
-				}
-
-				// Auto-cycle loop
-				function startAnimationLoop() {
-					if (animationTimer) clearInterval(animationTimer); 
-					hasClicked = false;
-
-					animationTimer = setInterval(() => {
-						if (!hasClicked && countries.length > 0) {
-							setTargetCountry(countries[currentIndex]);
-							currentIndex = (currentIndex + 1) % countries.length;
-						}
-					}, 3500);
-				}
-				
-				function freezeAnimation() {
-					if (!hasClicked) {
-						hasClicked = true;
-						clearInterval(animationTimer);
-					}
-				}
-				
-				startAnimationLoop();
-				
-				view.addEventListener('click', function(event, item) {
-					// Click on lines/diamonds extracts and freezes on that Country name
-					if (item && item.datum && (
-							item.datum.value
-						)
-					) {
-						freezeAnimation();
-						setTargetCountry(item.datum.value);
-					} else if (item && item.datum && (
-							item.datum.Country
-						)
-					) {
-						freezeAnimation();
-						setTargetCountry(item.datum.Country);
-					} else if (item === null) {
-						// Click on a specific Legend entry item node extracts and freezes on that index value
-						startAnimationLoop();
-					}
-				});
-
 			}).catch(console.error);
         },
 		
